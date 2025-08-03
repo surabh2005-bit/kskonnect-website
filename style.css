@@ -16,7 +16,7 @@ body {
 header {
   background-color: #003f5c;
   color: white;
-  padding: 1.5rem 2rem;
+  padding: 2rem 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,16 +30,17 @@ header {
 }
 
 .logo {
-  max-height: 80px;
+  max-height: 120px;
+  min-height: 100px;
   width: auto;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   object-fit: contain;
   border-radius: 6px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .branding h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 600;
   color: #ffffff;
 }
@@ -116,11 +117,13 @@ footer {
   }
 
   .branding h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .logo {
-    max-height: 60px;
+    max-height: 100px;
+    min-height: 80px;
+    margin-bottom: 1rem;
   }
 
   main {

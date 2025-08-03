@@ -1,132 +1,86 @@
-/* Reset and base styles */
-* {
+body {
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  scroll-behavior: smooth;
   background-color: #f9f9f9;
   color: #333;
 }
 
-/* Header styling */
-header {
-  background-color: #003f5c;
-  color: white;
-  padding: 2rem 2.5rem;
+nav {
+  background-color: #004080;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  border-bottom: 4px solid #ffa600;
 }
 
-.branding {
+.logo-container {
   display: flex;
   align-items: center;
 }
 
 .logo {
-  max-height: 120px;
-  min-height: 100px;
-  width: auto;
-  margin-right: 1.5rem;
-  object-fit: contain;
-  border-radius: 6px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  height: 40px;
+  margin-right: 10px;
 }
 
-.branding h1 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-/* Navigation styling */
-nav {
+nav ul {
+  list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 0.75rem;
-  transition: background-color 0.3s ease;
-  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-nav a:hover {
-  background-color: #ffa600;
-  color: #003f5c;
-}
-
-/* Main content */
-main {
-  padding: 3rem 2rem;
-  max-width: 1000px;
-  margin: auto;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-}
-
-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #003f5c;
-}
-
-section p,
-section ul {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-}
-
-/* Footer styling */
-footer {
+section {
+  padding: 60px 20px;
   text-align: center;
-  padding: 1.5rem;
-  background-color: #003f5c;
-  color: white;
-  font-size: 0.9rem;
-  margin-top: 2rem;
-  border-top: 4px solid #ffa600;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.responsive-img {
+  max-width: 90%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  display: block;
+}
 
-  nav {
-    justify-content: flex-start;
-    margin-top: 1rem;
-  }
+.responsive-img:hover {
+  transform: scale(1.03);
+}
 
-  .branding h1 {
-    font-size: 1.8rem;
-  }
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
 
-  .logo {
-    max-height: 100px;
-    min-height: 80px;
-    margin-bottom: 1rem;
-  }
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  main {
-    padding: 2rem 1rem;
-  }
+footer {
+  background-color: #004080;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 30px;
+  margin-bottom: 10px;
 }

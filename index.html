@@ -1,137 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="description" content="KSKonnect Pvt Ltd – Engineering services with precision and innovation">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KSKonnect Pvt Ltd</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .section {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    nav {
-      position: sticky;
-      top: 0;
-      background-color: #003f5c;
-      z-index: 1000;
-      padding: 1rem 2rem;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/kskonnect-logo.png" type="image/png">
 </head>
 <body>
-  <header>
-    <div class="branding">
-      <img src="images/logo.jpg" alt="KSKonnect Logo" class="logo" />
-      <h1>KSKonnect Pvt Ltd</h1>
+
+  <nav>
+    <div class="logo-container">
+      <img src="images/kskonnect-logo.png" alt="KSKonnect Pvt Ltd Logo" class="logo">
     </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#mission">Mission</a>
-      <a href="#services">Services</a>
-      <a href="#careers">Careers</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <main>
-    <section id="hero" class="section">
-      <h2>Connecting Ambitions. Creating Value.</h2>
-      <p>Integrated solutions across telecom, IT, finance, and HR — built for transformation.</p>
-    </section>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We believe in strong partnerships and collaborative growth.</p>
+    <img src="images/handshake.jpg" alt="Professional handshake representing partnership" class="responsive-img fade-in">
+  </section>
 
-    <section id="about" class="section">
-      <h2>About Us</h2>
-      <p>KSKonnect is a solutions provider specializing in the convergence of telecommunication, information technology, financial services, and human resource management...</p>
-    </section>
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>Strategic planning and digital workflows tailored for engineering excellence.</p>
+    <img src="images/workspace-graph.jpg" alt="Workspace with graphs and planning tools" class="responsive-img fade-in">
+    <img src="images/digital-workflow.jpg" alt="Digital workflow overlay with laptop and smartphone" class="responsive-img fade-in">
+  </section>
 
-    <section id="mission" class="section">
-      <h2>Mission</h2>
-      <p>Empowering transformation through intelligent connectivity...</p>
-      <h2>Vision</h2>
-      <p>To be the most trusted global partner for integrated business transformation...</p>
-    </section>
-
-    <section id="values" class="section">
-      <h2>Our Values</h2>
-      <ul>
-        <li><strong>Clarity:</strong> We simplify complexity...</li>
-        <li><strong>Collaboration:</strong> We co-create with clients...</li>
-        <li><strong>Adaptability:</strong> We evolve with your needs...</li>
-        <li><strong>Integrity:</strong> We deliver what we promise...</li>
-      </ul>
-    </section>
-
-    <section id="methodology" class="section">
-      <h2>Our Methodology</h2>
-      <ol>
-        <li><strong>Discover:</strong> We immerse ourselves...</li>
-        <li><strong>Strategize:</strong> We build a roadmap...</li>
-        <li><strong>Connect:</strong> We integrate capabilities...</li>
-        <li><strong>Deliver:</strong> We monitor and refine...</li>
-      </ol>
-    </section>
-
-    <section id="services" class="section">
-      <h2>Our Services</h2>
-      <h3>Telecommunication Services</h3>
-      <ul>
-        <li>RF Design, Testing & Optimization</li>
-        <li>Network Integration & Deployment</li>
-        <li>Fiber Engineering: OSP, TCP, Pole Analysis, GIS Mapping</li>
-      </ul>
-      <h3>IT Solutions & Software Development</h3>
-      <ul>
-        <li>Custom Software & Automation Tools</li>
-        <li>Telecom Software & OSS/BSS Integration</li>
-        <li>Cloud, Web & Mobile Applications</li>
-      </ul>
-      <h3>Financial & HR Services</h3>
-      <ul>
-        <li>Payroll, Compensation & Compliance</li>
-        <li>Onboarding, Staffing & Verification</li>
-        <li>HRMS Platforms & Workflow Automation</li>
-        <li>Financial Consulting & MIS Dashboards</li>
-      </ul>
-    </section>
-
-    <section id="careers" class="section">
-      <h2>Careers</h2>
-      <p>Join a team that connects disciplines and delivers real-world impact...</p>
-      <p>Send your resume to <strong>careers@kskonnect.com</strong></p>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact Us</h2>
-      <p>Email: <strong>contact@kskonnect.com</strong></p>
-      <p>Phone: <strong>+91-XXXXXXXXXX</strong></p>
-      <p>Location: Mulshi, Maharashtra, India</p>
-    </section>
-  </main>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Reach out to us for collaborations, queries, or career opportunities.</p>
+    <img src="images/scrabble-contact.jpg" alt="Scrabble tiles spelling Contact Us" class="responsive-img fade-in">
+  </section>
 
   <footer>
+    <img src="images/kskonnect-logo.png" alt="KSKonnect Pvt Ltd Logo" class="footer-logo">
     <p>&copy; 2025 KSKonnect Pvt Ltd. All rights reserved.</p>
   </footer>
 
-  <script>
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => observer.observe(section));
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

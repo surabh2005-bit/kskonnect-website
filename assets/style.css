@@ -1,65 +1,60 @@
-/* General body styling */
+/* General Reset & Typography */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
-/* Section padding and layout */
-section {
-  padding: 40px 20px;
+/* Section Colors */
+.section-light {
+  background-color: #e3f2fd;
+  padding: 60px 0;
+}
+.section-white {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+.section-gray {
+  background-color: #f1f1f1;
+  padding: 60px 0;
 }
 
 /* Headings */
 h2 {
-  font-size: 2em;
-  font-weight: bold;
+  color: #0d6efd;
   margin-bottom: 20px;
 }
 
-/* Section background colors */
-.section-light {
-  background-color: #f0f8ff;
+/* Navbar Brand */
+.navbar-brand {
+  font-weight: bold;
+  color: #0d6efd !important;
 }
 
-.section-white {
-  background-color: #fff;
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin-top: 20px;
 }
-
-.section-gray {
-  background-color: #f9f9f9;
-}
-
-/* Mobile nav menu spacing */
-.navbar-collapse {
-  padding: 20px;
-  background-color: #f8f9fa;
-}
-
-.navbar-nav .nav-item {
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-/* Form styling */
-form input,
-form textarea {
-  width: 100%;
+input, textarea {
   padding: 10px;
-  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
-form button {
-  background-color: #007bff;
+button {
+  background-color: #0d6efd;
   color: white;
-  padding: 10px 20px;
   border: none;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
-
-/* List styling */
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
+button:hover {
+  background-color: #0b5ed7;
 }

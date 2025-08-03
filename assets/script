@@ -1,24 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("KSKonnect website loaded successfully!");
+  console.log("KSKonnect site loaded!");
 
-  // Optional: Highlight active nav link on scroll
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      if (pageYOffset >= sectionTop) {
-        current = section.getAttribute("id");
+  // Fade-in animation
+  const fadeElements = document.querySelectorAll(".fade-in");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
       }
     });
+  }, { threshold: 0.1 });
 
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href").includes(current)) {
-        link.classList.add("active");
-      }
-    });
+  fadeElements.forEach(el => observer.observe(el));
+
+  // Mobile menu toggle
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
   });
 });

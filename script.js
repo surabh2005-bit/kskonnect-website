@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Fade-in animation
   const faders = document.querySelectorAll(".fade-in");
 
   const appearOptions = {
@@ -16,5 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   faders.forEach(fader => {
     appearOnScroll.observe(fader);
+  });
+
+  // Mobile nav toggle
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
   });
 });

@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -7,6 +8,26 @@ body {
   color: #333;
 }
 
+/* Header */
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  background-color: #e6f0ff;
+}
+
+.logo-header {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-style: italic;
+  color: #004080;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Navigation */
 nav {
   background-color: #004080;
   padding: 10px 20px;
@@ -16,16 +37,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  height: 40px;
-  margin-right: 10px;
 }
 
 nav ul {
@@ -43,11 +54,33 @@ nav a {
   font-size: 16px;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Sections */
 section {
   padding: 60px 20px;
   text-align: center;
 }
 
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+section ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Images */
 .responsive-img {
   max-width: 90%;
   height: auto;
@@ -62,6 +95,7 @@ section {
   transform: scale(1.03);
 }
 
+/* Fade-in Animation */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -73,6 +107,7 @@ section {
   transform: translateY(0);
 }
 
+/* Footer */
 footer {
   background-color: #004080;
   color: #fff;
@@ -83,4 +118,23 @@ footer {
 .footer-logo {
   height: 30px;
   margin-bottom: 10px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+    background-color: #004080;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }

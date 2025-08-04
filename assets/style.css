@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* Base styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,19 +7,19 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #333;
   line-height: 1.6;
 }
 
-/* Header styles */
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
   background-color: #003366;
   color: white;
+  padding: 20px;
   flex-wrap: wrap;
 }
 
@@ -42,7 +42,6 @@ header {
   color: #cce6ff;
 }
 
-/* Navigation styles */
 nav ul {
   list-style: none;
   display: flex;
@@ -55,55 +54,36 @@ nav a {
   font-weight: bold;
 }
 
-#menu-toggle {
-  display: none;
-}
-
-/* Hero section */
-.hero {
-  background: linear-gradient(to right, #0055a5, #00aaff);
+/* About Section */
+.about-section {
+  background-image: url('../images/handshake.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
   color: white;
-  padding: 60px 20px;
-  text-align: center;
+  position: relative;
 }
 
-/* Section styles */
+.about-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  max-width: 700px;
+  margin: auto;
+  border-radius: 8px;
+}
+
+/* Other Sections */
 section {
   padding: 60px 20px;
   text-align: center;
 }
 
-.about-section,
-.services-section,
-.careers-section,
-.contact-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-
-.about-text,
-.service-item,
-.career-item,
-.contact-item {
-  max-width: 500px;
-}
-
-img {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* Footer styles */
+/* Footer */
 footer {
   background-color: #003366;
   color: white;
-  padding: 20px;
   text-align: center;
-  font-size: 0.9em;
+  padding: 20px;
 }
 
 /* Fade-in animation */
@@ -116,25 +96,4 @@ footer {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Responsive nav toggle (optional enhancement) */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    display: none;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  #menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-  }
 }

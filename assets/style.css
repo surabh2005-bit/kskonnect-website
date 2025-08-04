@@ -1,177 +1,126 @@
-/* Reset & Base Styles */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
-  padding-top: 80px;
 }
 
-/* Header & Navigation */
+/* Header */
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
   background-color: #003366;
-  color: #fff;
-  padding: 15px 30px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .logo {
-  height: 50px;
-  margin-right: 15px;
+  font-size: 2rem;
+  font-weight: bold;
 }
-
-.branding h1 {
-  font-size: 24px;
-  margin-bottom: 5px;
-}
-
 .tagline {
-  font-size: 14px;
-  font-style: italic;
-  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
-
-nav {
-  margin-top: 10px;
-}
-
-#menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: #fff;
-}
-
-#nav-links {
-  display: flex;
-  flex-wrap: wrap;
+nav ul {
   list-style: none;
+  display: flex;
   justify-content: center;
-  margin-top: 10px;
+  gap: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover {
+  text-decoration: underline;
 }
 
-#nav-links li {
-  margin: 0 15px;
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #0066cc, #3399ff);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
 }
-
-#nav-links a {
-  color: #fff;
+.hero h1 {
+  font-size: 2.5rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+.cta-button {
+  background-color: white;
+  color: #0066cc;
+  padding: 10px 20px;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #e6f0ff;
 }
 
-#nav-links a:hover {
-  color: #00ccff;
-}
-
-/* Sections */
-section {
-  padding: 60px 20px;
+/* About Preview */
+.about-preview {
+  padding: 40px 20px;
   text-align: center;
-  background-color: #fff;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.link-button {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+.link-button:hover {
+  text-decoration: underline;
 }
 
-section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+/* Services Preview */
+.services-preview {
+  background-color: #eef6ff;
+  padding: 40px 20px;
+  text-align: center;
+}
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.card {
+  background-color: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.card h3 {
+  margin-bottom: 10px;
   color: #003366;
 }
 
-section h3 {
-  font-size: 22px;
-  margin-top: 30px;
-  color: #005599;
-}
-
-section p {
-  max-width: 800px;
-  margin: 0 auto 20px;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* Lists */
-section ul, section ol {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-  padding-left: 20px;
-}
-
-section li {
-  margin-bottom: 10px;
-  font-size: 16px;
+/* Final CTA */
+.cta-final {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #003366;
+  color: white;
 }
 
 /* Footer */
 footer {
-  background-color: #003366;
-  color: #fff;
+  background-color: #002244;
+  color: white;
   text-align: center;
   padding: 20px;
-  font-size: 14px;
-}
-
-/* Animations */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .logo-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #nav-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #nav-links li {
-    margin: 10px 0;
-  }
-
-  #menu-toggle {
-    display: block;
-  }
-
-  #nav-links {
-    display: none;
-  }
-
-  #nav-links.active {
-    display: flex;
-  }
+  font-size: 0.9rem;
 }

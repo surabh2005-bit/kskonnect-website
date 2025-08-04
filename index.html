@@ -18,16 +18,18 @@
       </div>
     </div>
     <nav>
+      <button id="menu-toggle">☰</button>
       <ul id="nav-links">
-        <li><a href="#home">🏠 Home</a></li>
         <li><a href="#about">📘 About Us</a></li>
+        <li><a href="#services">🛠️ Services</a></li>
+        <li><a href="#careers">💼 Careers</a></li>
         <li><a href="#contact">📞 Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Fullscreen About Section -->
-  <section id="about" class="about-section">
+  <!-- About Section -->
+  <section id="about" class="about-section fade-in">
     <div class="overlay-box">
       <h2>About Us</h2>
       <p>
@@ -36,10 +38,38 @@
     </div>
   </section>
 
+  <!-- Services Section -->
+  <section id="services" class="fade-in">
+    <div class="overlay-box light">
+      <h2>Our Services</h2>
+      <p>
+        We offer maintenance coordination, process optimization, and technical consulting tailored to modern infrastructure needs. Our solutions are designed to enhance operational efficiency and ensure long-term reliability.
+      </p>
+    </div>
+  </section>
+
+  <!-- Careers Section -->
+  <section id="careers" class="fade-in">
+    <div class="overlay-box light">
+      <h2>Careers</h2>
+      <p>
+        Join our dynamic team and be part of a culture that values innovation, accountability, and growth. We’re hiring for technical coordinators, team leads, and strategic planners.
+      </p>
+    </div>
+  </section>
+
   <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: contact@kskonnect.in</p>
+  <section id="contact" class="fade-in">
+    <div class="overlay-box light">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p>Email: contact@kskonnect.in</p>
+    </div>
   </section>
 
   <footer>

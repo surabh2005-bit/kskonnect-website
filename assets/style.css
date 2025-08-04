@@ -54,16 +54,24 @@ nav a {
   font-size: 16px;
 }
 
-/* Fullscreen About Section */
-.about-section {
-  height: 100vh;
-  background-image: url('../images/handshake.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
+#menu-toggle {
+  display: none;
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-section {
+  background-image: url('../images/handshake.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .overlay-box {
@@ -71,9 +79,13 @@ nav a {
   color: white;
   padding: 40px;
   max-width: 700px;
-  text-align: center;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.overlay-box.light {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #003366;
 }
 
 .overlay-box h2 {
@@ -86,10 +98,33 @@ nav a {
   line-height: 1.6;
 }
 
-/* Contact Section */
-section {
-  padding: 60px 20px;
-  text-align: center;
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0055a5;
 }
 
 /* Footer */
@@ -98,4 +133,37 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
 }
